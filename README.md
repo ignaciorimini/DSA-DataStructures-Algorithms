@@ -1,12 +1,12 @@
 # Data Structures & Algorithms (DSA) in C language
 
 ### Table of Contents
-Singly Linked Lists
-Stacks
-Queues
-Binary Trees
-Heaps
-Hash Tables
+1. Linked Lists
+2. Stacks
+3. Queues
+4. Binary Trees
+5. Heaps
+6. Hash Tables
 Each data structure is implemented in C and comes with detailed explanations and usage examples. These programs serve as a valuable resource for anyone learning data structures and their applications in C programming.
 Please refer to each individual folder for more details on each data structure implementation. Happy coding!
 
