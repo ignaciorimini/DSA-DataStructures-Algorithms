@@ -1,12 +1,12 @@
 # Data Structures & Algorithms (DSA) in C language
 
 ## Table of Contents
-- **Linked Lists:** Linked lists are a fundamental data structure where elements are connected using pointers.
-- **Stacks:** Stacks are a Last-In-First-Out (LIFO) data structure where elements are inserted and removed from the same end.
-- **Queues:** Queues are a First-In-First-Out (FIFO) data structure where elements are inserted at the rear and removed from the front.
-- **Binary Trees:** Binary trees are hierarchical data structures where each node has at most two children.
-- **Heaps:** Heaps are binary trees that satisfy the heap property, making them useful for priority queues and sorting algorithms.
-- **Hash Tables:** Hash tables use a hash function to map keys to array indices, enabling efficient data retrieval.
+- **Linked Lists**
+- **Stacks**
+- **Queues**
+- **Binary Trees**
+- **Heaps**
+- **Hash Tables**
 
 Each data structure is implemented in C and comes with detailed explanations and usage examples. These programs serve as a valuable resource for anyone learning data structures and their applications in C programming.
 Please refer to each individual folder for more details on each data structure implementation. Happy coding!
