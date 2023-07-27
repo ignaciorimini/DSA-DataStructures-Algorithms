@@ -2,6 +2,9 @@
 
 ## Table of Contents
 1. **Linked Lists:** Linked lists are a fundamental data structure where elements are connected using pointers.
+  - Singly Linked Lists
+  - Doubly Linked Lists
+  - Generic Linked Lists
 2. **Stacks:** Stacks are a Last-In-First-Out (LIFO) data structure where elements are inserted and removed from the same end.
 3. **Queues:** Queues are a First-In-First-Out (FIFO) data structure where elements are inserted at the rear and removed from the front.
 4. **Binary Trees:** Binary trees are hierarchical data structures where each node has at most two children.
