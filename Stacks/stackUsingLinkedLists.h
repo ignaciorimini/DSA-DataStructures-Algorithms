@@ -1,5 +1,5 @@
-#ifndef _STACKSARRAYS_
-#define _STACKSARRAYS_
+#ifndef _STACKSLISTS_
+#define _STACKSLISTS_
 #include "functionPrototypes.h"
 #include "genericLinkedList.h"
 
