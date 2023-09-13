@@ -7,6 +7,7 @@
 - **Binary Trees**
 - **Heaps**
 - **Hash Tables**
+- **Graphs**
 
 Each data structure is implemented in C and comes with detailed explanations and usage examples. These programs serve as a valuable resource for anyone learning data structures and their applications in C programming.
 Please refer to each individual folder for more details on each data structure implementation. Happy coding!
