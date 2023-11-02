@@ -3,6 +3,7 @@
 
 // Representation of Int Graph using the Adjacency Matrix.
 // Graphviz library is needed to draw the Graphs created int the program.
+// Comando para dibujar el grafo: dot -Tpng -o grafo.png grafo.dot
 
 typedef struct _Graph{
     int** matrix;
@@ -93,6 +94,57 @@ Graph graph_create_complete_graph(int numNodes){
     return graph;
 }
 
+Graph graph_create_path_graph(int numNodes){
+    Graph graph= graph_create(numNodes);
+
+    if(numNodes==1){
+        return graph;
+    }else if(numNodes==2){
+        graph_add_edge(graph, 0, 1);
+    }else{
+        for(int i=0; i < graph->numNodes-1; i++){
+            graph_add_edge(graph, i, i+1);
+        }
+    }
+
+    return graph;
+}
+
+Graph graph_create_cycle_graph(int numNodes){
+    if(numNodes < 3){
+        return NULL;
+    }
+
+    Graph cycle= graph_create_path_graph(numNodes);
+    graph_add_edge(cycle, 0, numNodes-1);
+    return cycle;
+}
+
+int graph_node_degree(Graph graph, int node){
+    if(node > graph->numNodes){
+        return -1;
+    }
+
+    int degree=0;
+    for(int i=0; i<graph->numNodes; i++){
+        if(graph->matrix[node][i] > 0){
+            degree++;
+        }
+    }
+    return degree;
+}
+
+int graph_min_degree(Graph graph){
+    int minDegree= graph_node_degree(graph, 0);
+    for(int i=1; i < graph->numNodes; i++){
+        int newDegree= graph_node_degree(graph, i);
+        if(newDegree < minDegree){
+            minDegree= newDegree;
+        }
+    }
+    return minDegree;
+}
+
 void graph_print_graph(Graph graph, const char* filename){
     printf("Adjacency Matrix:\n");
     for(int i=0; i<graph->numNodes; i++){
@@ -158,7 +210,19 @@ int main(){
     Graph k5= graph_create_complete_graph(5);
     graph_print_graph(k5, "graphk5.dot");
 
+    Graph p3= graph_create_path_graph(3);
+    graph_print_graph(p3, "graphp3.dot");
+
+    Graph c3= graph_create_cycle_graph(3);
+    graph_print_graph(c3, "graphc3.dot");
+
+    printf("Degree of vertex v0: %d\n", graph_node_degree(k5, 0));
+    printf("Min degree of C3: %d\n", graph_min_degree(c3));
+
     graph_destroy(graph);
+    graph_destroy(k5);
+    graph_destroy(p3);
+    graph_destroy(c3);
     free(list);
     return 0;
 }
